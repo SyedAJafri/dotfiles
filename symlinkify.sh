@@ -9,17 +9,15 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 
-osxfiles="bashrc vimrc vim zshrc oh-my-zsh"    # list of files/folders to symlink in homedir
 
-cygwinfiles="tmux.conf bash_profile minttyrc bashrc"
 
 if [ $1 = "cygwin" ]; then
-  files=cygwinfiles
-else [ $1 = "osx" ]; then
-  files=osxfiles
-else
-  echo "no argument specified. Please specify osx or cygwin (windows)"
-  exit 1
+    files="tmux.conf bash_profile minttyrc bashrc"
+elif [ $1 = "osx" ]; then
+    files="bashrc vimrc vim zshrc oh-my-zsh" 
+else 
+    echo "no argument specified. Please specify osx or cygwin (windows)"
+    exit 1
 fi
 
 ##########
