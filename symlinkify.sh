@@ -11,7 +11,7 @@ olddir=~/dotfiles_old             # old dotfiles backup directory
 
 osxfiles="bashrc vimrc vim zshrc oh-my-zsh"    # list of files/folders to symlink in homedir
 
-cygwinfiles="tmux.conf bash_profile minttyrc bashrc gradle"
+cygwinfiles="tmux.conf bash_profile minttyrc bashrc"
 
 if [ $1 = "cygwin" ]; then
   files=cygwinfiles
